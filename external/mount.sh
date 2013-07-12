@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2013 Wade T. Cline
+# Copyright (C) 2013 Wade T. Cline, Iruel Zahi
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -101,7 +101,8 @@ function cryptsetup_init {
 
 # Format the encrypted filesystem.
 function cryptsetup_format {
-	mkfs.ext3 "/dev/mapper/${NAME}"
+	sudo mkfs.ext3 "/dev/mapper/${NAME}"
+
 }
 
 # Remove cryptsetup mappings.
